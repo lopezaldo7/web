@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>sitio Huajuapan - Contacto</title>
+
+<style type="text/css">
+<!--
+body {
+	background-color: #abb2b9;
+}
+-->
+</style>
+
+</head>
+
+<body >
+
+<table  align="center" width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="90"><a href="index.html"><img src="imagenes/GRANDE.jpg" alt="" name="banner_imagen" width="700" height="90" border="0" id="banner_imagen" style="background-color: #993300" /></a></td>
+  </tr>
+  <tr>
+    <td height="0"><img src="imagenes/llano grande.gif" alt="" width="700" height="150" align="center" valign="middle" border="0s" /></td>
+  </tr>
+  <tr>
+    <td height="24"><img src="imagenes/CONTACTO.gif" width="700" height="25" /></td>
+  </tr>
+</table>
+<table align="center" width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+
+    </td>
+    <td width="560" bgcolor="#85c1e9"><p>&nbsp;</p>
+
+
+
+<div style="width:100%; overflow:hidden;">
+  <style>
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: auto;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+    .carousel-dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .carousel-dots span {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .carousel-dots .active {
+      background-color: #333;
+    }
+  </style>
+
+  <div class="carousel">
+    <div class="carousel-images" id="carousel-images">
+     <img src="imagenes/foto1.jpg" alt="Imagen 1" width="400" height="300">
+      <img src="imagenes/foto2.jpg" alt="Imagen 2" width="400" height="300" >
+      <img src="imagenes/foto3.jpg" alt="Imagen 3" width="400" height="300">
+      <img src="imagenes/foto4.jpg" alt="imagen 4" width="400" height="300">
+      <img src="imagenes/foto5.jpg" alt="imagen 5" width="400" height="300">
+      <img src="imagenes/foto6.jpg" alt="imagen 6" width="400" height="300"> 
+    </div>
+
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="carousel-dots" id="carousel-dots"></div>
+  </div>
+
+  <script>
+    const images = document.getElementById('carousel-images');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const totalSlides = images.children.length;
+    let index = 0;
+
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('span');
+    dots[0].classList.add('active');
+
+    function updateCarousel() {
+      images.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      index = (index + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    function goToSlide(i) {
+      index = i;
+      updateCarousel();
+    }
+  </script>
+</div> 
+
+
+
+ </td>
+  </tr>
+</table>
+<table align="center"s width="700" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="24"><img src="imagenes/WEB.gif" width="700" height="25" /></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+
